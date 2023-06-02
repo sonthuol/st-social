@@ -18,16 +18,16 @@ const Posts = () => {
     {
       id: 2,
       name: "Nguyễn Chế Huỳnh Như",
-      userId: "2",
+      userId: 2,
       profilePic:
         "https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/346449811_946755033176020_2949480601573452192_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=gwtpeYrcincAX9ial90&_nc_ht=scontent.fsgn2-4.fna&oh=00_AfCDwx0dGBbdAvi41zM_0wXLxWuzqlpqeZB_AS8slm5ziA&oe=647F84DD",
       desc: "Embe chỉ biết uống nước ngọt thôi😍",
       img: "https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/350534485_1221760248507398_3484321707244851719_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=MB1HVsm8cYEAX-ZbONb&_nc_ht=scontent.fsgn2-9.fna&oh=00_AfDMNwY7h4j_U0TwS0R8Zi-na2CGhFwLSY5lMFAAjKmuaA&oe=647EF890",
     },
     {
-      id: 2,
+      id: 3,
       name: "Nguyễn Chế Huỳnh Như",
-      userId: "2",
+      userId: 2,
       profilePic:
         "https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/346449811_946755033176020_2949480601573452192_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=gwtpeYrcincAX9ial90&_nc_ht=scontent.fsgn2-4.fna&oh=00_AfCDwx0dGBbdAvi41zM_0wXLxWuzqlpqeZB_AS8slm5ziA&oe=647F84DD",
       desc: "Embe chỉ biết uống nước ngọt thôi😍",
