@@ -51,12 +51,19 @@
         display: flex;
         align-items: center;
         gap: 20px;
+        @include mobile {
+          justify-content: space-between;
+        }
+
         .item {
           display: flex;
           align-items: center;
           gap: 10px;
           cursor: pointer;
           font-size: 14px;
+          @include mobile {
+            flex-direction: column;
+          }
         }
       }
     }
