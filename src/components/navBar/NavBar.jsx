@@ -10,9 +10,11 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
+import { AuthContext } from "../../context/authContext";
 
 const NavBar = () => {
   const { toggle, darkMode } = useContext(DarkModeContext);
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <div className="navbar">
@@ -37,11 +39,8 @@ const NavBar = () => {
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className="user">
-          <img
-            src="https://images.pexels.com/photos/16931635/pexels-photo-16931635/free-photo-of-fashion-love-people-woman.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt=""
-          />
-          <span>Son Thuol</span>
+          <img src={currentUser.profilePic} alt="" />
+          <span>{currentUser.name}</span>
         </div>
       </div>
     </div>
