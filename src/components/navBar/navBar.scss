@@ -16,7 +16,7 @@
     .left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 18px;
       @include mobile {
         width: 100%;
         justify-content: space-between;
@@ -54,7 +54,7 @@
     .right {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 18px;
       @include mobile {
         display: none;
       }
