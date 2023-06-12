@@ -12,11 +12,13 @@ import Posts from "../../components/posts/Posts";
 import { makeRequest } from "../../axios";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../context/authContext";
+import Update from "../../components/update/Update";
 
 const Profile = () => {
+  const [openUpdate, setOpenUpdate] = useState(false);
   const { currentUser } = useContext(AuthContext);
   const userId = parseInt(useLocation().pathname.split("/")[2]);
 
@@ -58,12 +60,12 @@ const Profile = () => {
     <div className="profile">
       <div className="images">
         <img
-          src="https://images.pexels.com/photos/13440765/pexels-photo-13440765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src={isLoading ? "loading" : "/upload/" + data.converPic}
           alt=""
           className="cover"
         />
         <img
-          src={isLoading ? "loading" : data.profilePic}
+          src={isLoading ? "loading" : "/upload/" + data.profilePic}
           alt=""
           className="profilePic"
         />
@@ -110,7 +112,7 @@ const Profile = () => {
             {isLoading ? (
               "loading"
             ) : currentUser.id === data.id ? (
-              <button>Update</button>
+              <button onClick={() => setOpenUpdate(true)}>Update</button>
             ) : (
               <button onClick={handleFollow}>
                 {isLoading
@@ -128,6 +130,9 @@ const Profile = () => {
         </div>
         <Posts userId={userId} />
       </div>
+      {openUpdate && (
+        <Update setOpenUpdate={setOpenUpdate} user={currentUser} />
+      )}
     </div>
   );
 };
